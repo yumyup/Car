@@ -3,7 +3,7 @@
  */
 public class Car {
     String name;
-    int power;
+    double power;
     int speed;
 
 
@@ -14,19 +14,21 @@ public class Car {
     }
 
 
-    void turbo(double a) {
-        double turbo = (a + a * 0.1);
-        System.out.println();
+    void turbo() {
+        power = (power * 1.1);
+        System.out.println("wzrost mocy o 10%: " + power + "KM");
     }
 
-    void increaseSpeed(int a, int b) {
-        double increaseSpeed = (a + b);
-        System.out.println();
+
+    void increaseSpeed(int change) {
+        speed = speed + change;
+        System.out.println("wzrost prędkości o: " + change + " " + speed + "km/h");
     }
 
-    void decreaseSpeed (int a, int b) {
-        double decreaseSpeed = (a - b);
-        System.out.println( decreaseSpeed);}
+    void decreaseSpeed(int change) {
+        double decreaseSpeed = (speed - change);
+        System.out.println("spadek prędkości o: " + change + " " + decreaseSpeed + "km/h");
+    }
 
 
     void showInfo() {
